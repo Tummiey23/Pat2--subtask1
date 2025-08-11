@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+
+string morse[26] = {
+    ".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..", ".---",
+    "-.-", ".-..", "--", "-.", "---", ".--.", "--.-", ".-.", "...", "-",
+    "..-", "...-", ".--", "-..-", "-.--", "--.."
+};
+
+int main() {
+    string text;
+  
+    getline(cin, text);
+
+    string full = "";
+
+    for (char c : text) {
+        if (isalpha(c)) {
+            c = toupper(c);
+            int i = c - 'A';
+            cout << c << ": " << morse[i] << endl;
+            full += morse[i] + "   ";
+        }
+    }
+
+    cout << "\nFull Morse code:\n" << full << endl;
+    return 0;
+}
+
