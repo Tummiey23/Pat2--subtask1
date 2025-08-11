@@ -10,7 +10,7 @@ string morse[26] = {
 int main() {
     string text;
 
-    cout << "enter a message in english;
+    cout << "enter a message in english:" <<;
     getline(cin, text);
     
 
